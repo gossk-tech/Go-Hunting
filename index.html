@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Hunting</title>
+    <script>
+        function showRandomImage() {
+            const images = ["Hunting.png", "Hunting 1.png", "Hunting 2.png", "Hunting 3.png", "Hunting 4.png", "Hunting 5.png", "Hunting 6.png", "Hunting 7.png", "Hunting 8.png", "Hunting 9.png", "Hunting 10.png", "Hunting 11.png", "Hunting 12.png", "Hunting 13.png"];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const imageElement = document.getElementById('hunting-image');
+            imageElement.src = images[randomIndex];
+        }
+    </script>
 </head>
 <body>
-    <button>Go hunting!</button>
-    <div>
-        <img src="Hunting.png" alt="Hunting Image 1">
-        <img src="Hunting 2.png" alt="Hunting Image 2">
-        <img src="Hunting 3.png" alt="Hunting Image 3">
-        <img src="Hunting 4.png" alt="Hunting Image 4">
-        <img src="Hunting 5.png" alt="Hunting Image 5">
-        <img src="Hunting 6.png" alt="Hunting Image 6">
-        <img src="Hunting 7.png" alt="Hunting Image 7">
-        <img src="Hunting 8.png" alt="Hunting Image 8">
-        <img src="Hunting 9.png" alt="Hunting Image 9">
-        <img src="Hunting 10.png" alt="Hunting Image 10">
-        <img src="Hunting 11.png" alt="Hunting Image 11">
-        <img src="Hunting 12.png" alt="Hunting Image 12">
-        <img src="Hunting 13.png" alt="Hunting Image 13">
-    </div>
+    <h1>Welcome to Go Hunting!</h1>
+    <button onclick="showRandomImage()">Go hunting!</button>
+    <br>
+    <img id="hunting-image" src="" alt="Hunting Image" style="margin-top: 20px; width: 300px; height: auto;">
 </body>
 </html>
